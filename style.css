@@ -1,19 +1,25 @@
 html{
-    min-height: 100vh;
-    background: #000000;  
+    /* background: #000000;  
     background: -webkit-linear-gradient(to top, #193747,#0B1B25, rgb(004,012,023)); 
-    background: linear-gradient(to top,#193747,#0B1B25, rgb(004,012,023));
+    background: linear-gradient(to top,#193747,#0B1B25, rgb(004,012,023)); */
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
-nav {
+.background{
+    background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
+    background-position: center;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+}
+
+/* HEADER */
+header {
     height: 100px;
     width: 100%;
-    position: fixed;
-    background-color: rgb(004,012,023);
-    padding: 0.5%;
+    background-color: rgb(004,012,023); 
+    padding:5px 0px 5px 5px;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -22,33 +28,30 @@ nav {
     font-size: 25px;
 }
 
-img[src="logo_lol.png"]{
+img[src="img/logo_lol.png"]{
     cursor: pointer;
     height: 100px;
     width: 100px;
 }
 
-.searcher{
+/* BODY */
+/* .searcher{
     display: inline-flex;
-    position: absolute;
     font-size: 22px;
     color: rgb(211, 211, 211);
     padding-left: 40%;
-}
+} */
 
-input[type="search"]{
-    margin-top: 130px;
-    margin-left: 40px ;
+/* input[type="search"]{
     padding: 9px 10px 9px 52px;
     font-size: 20px;
     outline: none;
     border-radius: 15px;
-    color: rgb(211, 211, 211);
     border: 3px outset rgba(8, 162, 162, 0.788);
-    background: #fff url("search-icon.png") no-repeat 10px center;
-}
+    background: #fff url("img/search-icon.png") no-repeat 10px center;
+} */
 
-.column{
+/* .filter{
     position: fixed;
     float: left;
     width: 300px;
@@ -61,27 +64,39 @@ input[type="search"]{
     background-color:rgb(004,012,023);
     color:rgb(240,230,210);
     font-size: 24px;
-}
+} */
 
-select{
+/* select{
     margin-bottom: 30px;
     font-size: 18px;
     outline: none;
     border-radius: 15px;
     border: 3px outset rgba(8, 162, 162, 0.788);
     padding: 9px 10px 9px 10px;
+} */
+
+/* CHAMPIONS */
+#allTheChamps{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+#containerProfilePic{
+    width: 150px;
 }
 
-.container{
-    float: left;
-    width: auto;
-    height: auto;
-    margin-top: 250px;
-    margin-left: 400px;
-    margin-bottom: auto;
-    display: grid;
-    gap: 400px;
-    grid-template-columns: 200px 100px;
- 
+#profilePic{
+    width:100%
+}
 
+.containerEachChamp{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(030,035,040);
+    height: 250px;
+    width: 200px;
+    margin: 20px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
