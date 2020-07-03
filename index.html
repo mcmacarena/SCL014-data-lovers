@@ -6,48 +6,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="background">
-    <!--Sección del navegador-->
-    <header>
-      <div class="log_img">
-        <img src="img/logo_lol.png" alt="logo">
+    <!-- contenedor que agrupa todos los elementos de la pagina -->
+    <div id="allTheContents">
+      <!--Sección del navegador-->
+      <header>
+        <div class="log_img">
+          <img src="img/logo_lol.png" alt="logo">
+        </div>
+        <div class="pag_name">
+          <h1>League Pickup</h1>
+        </div>
+      </header>
+      <div id="containerAsideMain">
+      <!--Sección de filtros-->
+      <aside class="filter">
+        <br>
+        <label for=" ">Filtro1</label>
+        <br>
+        <div id="checkboxTags">
+          <label><input type="checkbox" id="assasin" value="assasin"> Assasin</label><br>
+          <label><input type="checkbox" id="fighter" value="fighter"> Fighter</label><br>
+          <label><input type="checkbox" id="mage" value="mage"> Mage</label><br>
+          <label><input type="checkbox" id="marksman" value="marksman"> Marksman</label><br>
+          <label><input type="checkbox" id="support" value="support"> Support</label><br>
+          <label><input type="checkbox" id="tank" value="tank"> Tank</label><br>
+        </div>
+      </aside>
+      <!-- contenedor del buscador mas todos los campeones -->
+      <div id="mainContent">
+        <!--Sección del buscador-->
+        <div class="searcher">
+          <input type="search" autocomplete="on" placeholder="Ingresa el nombre">
+        </div>
+        <!--Hacer fichas miniaturas-->
+        <div id="allTheChamps">
+        </div>
       </div>
-      <div class="pag_name">
-        <h1>League Pickup</h1>
-      </div>
-    </header>
-    <!--Sección del buscador-->
-    <!-- <div class="searcher">
-      <p>
-        <input type="search" autocomplete="on" placeholder="Ingresa el nombre">
-      </p>
-    </div> -->
-    <!--Sección de filtros-->
-    <!-- <nav class="filter">
-      <br>
-      <label for=" ">Filtro1</label>
-      <br>
-      <select name="filter1" id="">
-        <option value=" ">laopciondefiltroquevaya</option>
-      </select>
-      <br>
-      <label for=" ">Filtro2</label>
-      <br>
-      <select name="filter2" id="">
-        <option value=" ">laopciondefiltroquevaya</option>
-      </select>
-      <br>
-      <label for=" ">Filtro3</label>
-      <br>
-      <select name="filter3" id="">
-        <option value=" ">laopciondefiltroquevaya</option>
-      </select>
-    </div> -->
-    <!--Hacer fichas miniaturas-->
-    <div id="allTheChamps">
-
     </div>
-
-    <div id="root"></div>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
