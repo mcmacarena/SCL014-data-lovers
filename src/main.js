@@ -8,30 +8,33 @@ let champions=Object.values(lol.data);
 let renderChampionsInScreen=(arrayOfChampions)=>{
   document.getElementById('allTheChamps').innerHTML = arrayOfChampions.map(champ => 
     `<div class="containerEachChamp">
-      <p> ${champ.name.toUpperCase()}</p>
+      <p> ${champ.name}</p>
+      <br>
       <div id="containerProfilePic"> 
         <img id="profilePic" src="${champ.splash}">
       </div>
+      <br>
       <p> "${champ.title}"</p>
+      <br>
       <p> [${champ.tags}]</p>
     </div>`
   ).join('');
 };
 
 //imprimir todos 
-// renderChampionsInScreen(champions);
+renderChampionsInScreen(champions);
 
 
-let checkbox=document.getElementById("checkboxTags");
-let tagValue;
+// let checkbox=document.getElementById("checkboxTags");
+// let tagValue;
 
-let checked= () =>{
-  if(checkbox.checked=true)
-  tagValue=checkbox.value;
-  return tagValue
-}
+// let checked= () =>{
+//   if(checkbox.checked=true)
+//   tagValue=checkbox.value;
+//   return tagValue
+// }
 
-checkbox.addEventListener("click",checked);
+// checkbox.addEventListener("click",checked);
 
 
 
