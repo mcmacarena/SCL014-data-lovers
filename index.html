@@ -21,16 +21,27 @@
       <!--Sección de filtros-->
       <aside class="filter">
         <br>
-        <label for=" ">Filtro1</label>
+        <label for=" ">Tag Filter</label>
         <br>
         <div id="checkboxTags">
-          <label><input type="checkbox" id="assasin" value="assasin"> Assasin</label><br>
-          <label><input type="checkbox" id="fighter" value="fighter"> Fighter</label><br>
-          <label><input type="checkbox" id="mage" value="mage"> Mage</label><br>
-          <label><input type="checkbox" id="marksman" value="marksman"> Marksman</label><br>
-          <label><input type="checkbox" id="support" value="support"> Support</label><br>
-          <label><input type="checkbox" id="tank" value="tank"> Tank</label><br>
+          <label><input name="filterTag" type="radio" id="assasin" value="Assassin"> Assassin</label><br>
+          <label><input name="filterTag" type="radio" id="fighter" value="Fighter" > Fighter</label><br>
+          <label><input name="filterTag" type="radio" id="mage" value="Mage"> Mage</label><br>
+          <label><input name="filterTag" type="radio" id="marksman" value="Marksman"> Marksman</label><br>
+          <label><input name="filterTag" type="radio" id="support" value="Support"> Support</label><br>
+          <label><input name="filterTag" type="radio" id="tank" value="Tank" > Tank</label><br>
         </div>
+        <br>
+        <label for=" ">Information filter</label>
+        <br>
+        <select id="selectInformation">
+          <option value="default" selected> Choose your option</option> 
+          <option value="attack"> Atack de mayor de menor</option> 
+          <option value="defense"> Defense de mayor a menor</option>
+          <option value="magic"> Magic de mayor a menor</option>
+          <option value="difficulty"> Difficulty de mayor a menor</option>
+        </select>
+        
       </aside>
       <!-- contenedor del buscador mas todos los campeones -->
       <div id="mainContent">

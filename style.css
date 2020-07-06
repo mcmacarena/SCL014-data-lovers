@@ -1,122 +1,140 @@
+@font-face{
+    font-family:themillion;
+    src: url(letra1.ttf);
+}
+
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('/src/IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 *{
     /* sacar el padding y margin por defecto de los navegadores */
     margin:0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    font-family:themillion;
     /* #193747,#0B1B25, rgb(004,012,023));  */
+    /* celeste rgba(8, 162, 162, 0.788) */
 }
-
 .background{
     background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
     background-position: center;
     background-attachment: fixed;
 }
-
 #allTheContents{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
 #containerAsideMain{
     display: flex;
     flex-wrap: nowrap;
     margin-top: 110px;
 }
-
 /* HEADER */
 header {
     position: fixed;
     height: 100px;
     width: 100%;
-    background-color: rgb(004,012,023); 
+    background-color: rgb(004,012,023, 0.85) ; 
     padding:5px 0px 5px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .pag_name{
     color: rgb(198,146,060);
     font-size: 25px;
 }
-
 img[src="img/logo_lol.png"]{
     cursor: pointer;
     height: 100px;
     width: 100px;
 }
-
 /* BODY */
 aside{
-    /* position: fixed; */
+    position: fixed;
     flex: 0 0 200px;
     height: 100%;
     padding: 10px;
-    line-height: 40px;
+    line-height: 30px;
     padding-left: 30px; 
-    background-color:rgb(004,012,023);
-    color:rgb(240,230,210);
-    font-size: 24px;
+    background-color:rgb(004,012,023, 0.85);
+    color:rgb(194, 194, 194);
+    font-size: 18px;
     display: flex;
     flex-direction: column;
 } 
-
-/* select{
-    margin-bottom: 30px;
-    font-size: 15px;
-    outline: none;
-    border-radius: 15px;
-    border: 3px outset rgba(8, 162, 162, 0.788);
-    padding: 9px 10px 9px 10px;
-}  */
-
+label[for=" "]{
+    margin-bottom: 10px;
+    color: rgb(198,146,060);
+}
+/* input[type="checkbox"]{
+} */
 #mainContent{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .searcher{
-    margin-top: 20px;
+    margin-top: 35px;
+    margin-bottom: 50px;
     align-items: center;
     font-size: 15px;
     color: rgb(211, 211, 211);
+    margin-left: 130px;
 } 
-
 input[type="search"]{
-    padding: 9px 10px 9px 52px;
+    padding: 9px 10px 9px 135px;
     font-size: 15px;
     outline: none;
-    border-radius: 15px;
-    border: 3px outset rgba(8, 162, 162, 0.788);
-    background: #fff url("img/search-icon.png") no-repeat 10px center;
+    border: 1px solid rgb(198,146,060);
+    background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    width: 384px;
+    height: 40px;
 } 
-
 /* CHAMPIONS */
 #allTheChamps{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 285px;
 } 
-
 #containerProfilePic{
-    width: 150px;
+    height: auto;
+    width: 230px;
 }
-
 #profilePic{
-    width:100%
+    width:100%;
+    border-radius:8px ; 
 }
-
 .containerEachChamp{
     display:flex;
     flex-direction: column;
-    background-color: rgb(030,035,040);
-    height: 250px;
-    width: 200px;
-    margin: 20px;
-    padding: 5px;
+    background-color: rgb(17, 17, 17, 0.85);
+    height: 350px;
+    width: 250px;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    box-shadow: black;
+    color: rgb(207, 207, 207);
+    margin-right: 58px;
+    margin-bottom: 70px;
+    font-size: 20px;
+}
+.containerEachChamp:hover{
+    border: 1px solid #C6923C;
+    cursor:pointer;
+}
+input[type="search"]:hover{
+    border:1px solid rgb(236, 193, 124);
+    cursor: pointer;
+}
+
+.icon-shield:before {
+    content: "\e9b4";
 }

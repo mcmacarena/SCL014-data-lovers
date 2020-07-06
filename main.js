@@ -1,68 +1,54 @@
-import { filterTag} from './data.js';
+import { filterTag } from './data.js';
+import { orderInfo } from './data.js';
 import lol from './data/lol/lol.js';
 
-//Array que contiene los valores del data (en este caso cada uno de los champions)
-let champions=Object.values(lol.data);
+// Array que contiene los valores del data (en este caso cada uno de los champions)
+const champions = Object.values(lol.data);
+console.log(champions)
 
-//imprimir en pantalla los array de champions que escoja (todos o filtrados)
-let renderChampionsInScreen=(arrayOfChampions)=>{
-  document.getElementById('allTheChamps').innerHTML = arrayOfChampions.map(champ => 
+// imprimir en pantalla los array de champions que escoja (todos o filtrados)
+const renderChampionsInScreen = (arrayOfChampions) => {
+  document.getElementById('allTheChamps').innerHTML = arrayOfChampions.map(champ =>
     `<div class="containerEachChamp">
-      <p> ${champ.name.toUpperCase()}</p>
+      <p> ${champ.name.toUpperCase()}</p><br>
       <div id="containerProfilePic"> 
         <img id="profilePic" src="${champ.splash}">
-      </div>
-      <p> "${champ.title}"</p>
+      </div><br>
+      <p> "${champ.title}"</p><br>
       <p> [${champ.tags}]</p>
-    </div>`
-  ).join('');
+      <p> <span class="icon-shield"></span> ${champ.info.attack} ${champ.info.defense} <p>
+      <p> ${champ.info.magic} ${champ.info.difficulty} <p>
+    </div>`).join('');
 };
 
-//imprimir todos 
-// renderChampionsInScreen(champions);
+// imprimir todos
+renderChampionsInScreen(champions);
 
+// FILTER TAG
+//seleccion todos los filtros tag
+const checkbox = document.querySelector('#checkboxTags');
 
-let checkbox=document.getElementById("checkboxTags");
-let tagValue;
-
-let checked= () =>{
-  if(checkbox.checked=true)
-  tagValue=checkbox.value;
-  return tagValue
+//función que recoge nombre del tag escogido
+function valueFilterTag() {
+  if (document.querySelector('#checkboxTags :checked') !== null) {
+    const tagValue = document.querySelector('#checkboxTags :checked').value;
+    renderChampionsInScreen(filterTag(champions, tagValue));
+  }
 }
+checkbox.addEventListener('click', valueFilterTag);
 
-checkbox.addEventListener("click",checked);
+//ORDER INFORMATION
+//seleccionar filtros de informacion
+const selectList = document.querySelector('#selectInformation');
 
+function valueOrderInformation() {
+  if (selectList !== null) {
+    const valueSelectInformation = selectList.value;
+    renderChampionsInScreen(orderInfo(champions , valueSelectInformation));
+  }
+}
+selectList.addEventListener('change', valueOrderInformation);
 
-
-
-
-
-console.log(checkbox);
-
-// filterTag(champions);
-
-
-// document.getElementById("checkboxTags").addEventListener(click,validate)
-// function validate(){
-//   var selectChoose = document.getElementById('checkboxTags');
-//   var maxOptions = 2;
-//   var optionCount = 0;
-//   for (var i = 0; i < selectChoose.length; i++) {
-//     if (selectChoose[i].selected) {
-//       optionCount++;
-//       if (optionCount > maxOptions) {
-//         alert("validation failed, not submitting")
-//         return false;
-//       }
-//     }
-//   }
-//   return true;
-// };
-
-
-//probando
-// console.log(filterTag(champions));
 
 
 
