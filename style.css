@@ -15,9 +15,13 @@
     /* sacar el padding y margin por defecto de los navegadores */
     margin:0;
     padding: 0;
-    font-family:themillion;
+    /* font-family:themillion; */
     /* #193747,#0B1B25, rgb(004,012,023));  */
     /* celeste rgba(8, 162, 162, 0.788) */
+}
+
+html{
+    font-family:themillion;
 }
 .background{
     background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
@@ -39,7 +43,7 @@ header {
     position: fixed;
     height: 100px;
     width: 100%;
-    background-color: rgb(004,012,023, 0.85) ; 
+    background-color: rgb(004,012,023) ; 
     padding:5px 0px 5px 5px;
     display: flex;
     align-items: center;
@@ -62,7 +66,7 @@ aside{
     padding: 10px;
     line-height: 30px;
     padding-left: 30px; 
-    background-color:rgb(004,012,023, 0.85);
+    background-color:rgb(004,012,023);
     color:rgb(194, 194, 194);
     font-size: 18px;
     display: flex;
@@ -72,8 +76,10 @@ label[for=" "]{
     margin-bottom: 10px;
     color: rgb(198,146,060);
 }
-/* input[type="checkbox"]{
-} */
+.select{
+
+
+}
 #mainContent{
     display: flex;
     flex-direction: column;
@@ -112,6 +118,7 @@ input[type="search"]{
     border-radius:8px ; 
 }
 .containerEachChamp{
+    line-height: 20px;
     display:flex;
     flex-direction: column;
     background-color: rgb(17, 17, 17, 0.85);
@@ -125,6 +132,7 @@ input[type="search"]{
     margin-right: 58px;
     margin-bottom: 70px;
     font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .containerEachChamp:hover{
     border: 1px solid #C6923C;
@@ -135,6 +143,19 @@ input[type="search"]:hover{
     cursor: pointer;
 }
 
-.icon-shield:before {
-    content: "\e9b4";
+/* iconos */
+.fa-gavel{
+    color: rgb(129, 3, 3);
+}
+
+.fa-shield-alt{
+    color: rgb(5, 116, 99);
+}
+
+.fa-hat-wizard{
+    color: rgb(00, 72, 139);
+}
+
+.fa-exclamation-circle{
+    color:rgb(214, 158, 67);
 }
