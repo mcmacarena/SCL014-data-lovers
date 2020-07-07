@@ -15,8 +15,8 @@ const renderChampionsInScreen = (arrayOfChampions) => {
         <img id="profilePic" src="${champ.splash}">
       </div><br>
       <p> [${champ.tags}]</p><br>
-      <p> <i class="fas fa-gavel"></i>${champ.info.attack}&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-shield-alt"></i>${champ.info.defense}</p>
-      <p><i class="fas fa-hand-sparkles"></i>${champ.info.magic}&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-exclamation-triangle"></i>${champ.info.difficulty}</p>
+      <p><i class="fas fa-gavel"> </i>  ${champ.info.attack} &nbsp&nbsp<i class="fas fa-shield-alt"></i>  ${champ.info.defense}</p>
+      <p><i class="fas fa-flask"></i>  ${champ.info.magic} &nbsp&nbsp<i class="fas fa-exclamation-triangle"></i>  ${champ.info.difficulty}</p>
     </div>`).join('');
 };
 
@@ -34,7 +34,7 @@ function valueFilterTag() {
     renderChampionsInScreen(filterTag(champions, tagValue));
   }
 }
-checkbox.addEventListener('click', valueFilterTag);
+checkbox.addEventListener('change', valueFilterTag);
 
 //ORDER INFORMATION
 //seleccionar filtros de informacion
