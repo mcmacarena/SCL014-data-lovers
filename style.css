@@ -30,12 +30,8 @@ html{
 }
 #allTheContents{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 #containerAsideMain{
-    display: flex;
-    flex-wrap: nowrap;
     margin-top: 110px;
 }
 /* HEADER */
@@ -46,8 +42,8 @@ header {
     background-color: rgb(004,012,023) ; 
     padding:5px 0px 5px 5px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 .pag_name{
     color: rgb(198,146,060);
@@ -79,16 +75,16 @@ label[for=" "]{
 
 #mainContent{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
 }
 .searcher{
-    margin-top: 35px;
+    margin-top: 150px;
     margin-bottom: 50px;
-    align-items: center;
+    align-self: center;
     font-size: 15px;
     color: rgb(211, 211, 211);
-    margin-left: 130px;
+    /* margin-left: 130px; */
+    justify-self: center;
 } 
 input[type="search"]{
     padding: 9px 10px 9px 135px;

@@ -1,11 +1,8 @@
-import { filterTag } from './data.js';
-import {filterSearch} from './data.js';
-import { orderInfo } from './data.js';
+import { filterTag, filterSearch, orderInfo } from './data.js';
 import lol from './data/lol/lol.js';
 
 // Array que contiene los valores del data (en este caso cada uno de los champions)
 const champions = Object.values(lol.data);
-console.log(champions)
 
 // imprimir en pantalla los array de champions que escoja (todos o filtrados)
 const renderChampionsInScreen = (arrayOfChampions) => {
@@ -25,10 +22,10 @@ const renderChampionsInScreen = (arrayOfChampions) => {
 renderChampionsInScreen(champions);
 
 // FILTER TAG
-//seleccion todos los filtros tag
+// seleccion todos los filtros tag
 const checkbox = document.querySelector('#checkboxTags');
 
-//función que recoge nombre del tag escogido
+// función que recoge nombre del tag escogido
 function valueFilterTag() {
   if (document.querySelector('#checkboxTags :checked') !== null) {
     const tagValue = document.querySelector('#checkboxTags :checked').value;
@@ -37,29 +34,34 @@ function valueFilterTag() {
 }
 checkbox.addEventListener('change', valueFilterTag);
 
-//ORDER INFORMATION
-//seleccionar filtros de informacion
+// ORDER INFORMATION
+// seleccionar filtros de informacion
 const selectList = document.querySelector('#selectInformation');
 
 function valueOrderInformation() {
   if (selectList !== null) {
     const valueSelectInformation = selectList.value;
-    renderChampionsInScreen(orderInfo(champions , valueSelectInformation));
+    renderChampionsInScreen(orderInfo(champions, valueSelectInformation));
   }
 }
 selectList.addEventListener('change', valueOrderInformation);
 
-const inputSearch = document.getElementById("inputSearch");
+// FILTROS FUNCIONANDO JUNTOS
+function mixFilterTagInformation () {
+  if (document.querySelector('#checkboxTags :checked') !== null && selectList !== null) {
+    const tagValue = document.querySelector('#checkboxTags :checked').value;
+    const valueSelectInformation = selectList.value;
+    renderChampionsInScreen(filterTag(orderInfo(champions, valueSelectInformation), tagValue));
+  }
+}
+selectList.addEventListener('change', mixFilterTagInformation);
 
-function valueSearcher(){
-  const inputValue= inputSearch.value;
-  console.log(inputValue);
-  renderChampionsInScreen(filterSearch(champions,inputValue));
- 
+// SEARCHER
+const inputSearch = document.getElementById('inputSearch');
+
+function valueSearcher() {
+  const inputValue = inputSearch.value.toUpperCase();
+  renderChampionsInScreen(filterSearch(champions, inputValue));
 }
 
 inputSearch.addEventListener('keyup', valueSearcher);
-
-
-
-
