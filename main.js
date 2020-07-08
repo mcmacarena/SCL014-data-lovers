@@ -15,8 +15,8 @@ const renderChampionsInScreen = (arrayOfChampions) => {
         <img id="profilePic" src="${champ.splash}">
       </div><br>
       <p> [${champ.tags}]</p><br>
-      <p><i class="fas fa-gavel"> </i>  ${champ.info.attack} &nbsp&nbsp<i class="fas fa-shield-alt"></i>  ${champ.info.defense}</p>
-      <p><i class="fas fa-flask"></i>  ${champ.info.magic} &nbsp&nbsp<i class="fas fa-exclamation-triangle"></i>  ${champ.info.difficulty}</p>
+      <p><img id="attack" src="img/Melee_role.png"> ${champ.info.attack}&nbsp&nbsp<img id="defense" src="img/Armor_icon.png"> ${champ.info.defense}</p>
+      <p><img id="magic" src="img/Mana_regeneration_icon.png">${champ.info.magic} &nbsp&nbsp<img id="difficulty" src="img/Champion_style_abilities_active.png">${champ.info.difficulty}</p>
     </div>`).join('');
 };
 
