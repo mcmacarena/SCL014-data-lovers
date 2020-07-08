@@ -17,5 +17,12 @@ export const orderInfo = (champions, valueSelectInformation) => {
   return arrayChampionsInformation;
 };
 
+export const filterSearch = (champions, inputValue) =>{
+  const arraySearchChampions = champions.filter(champ=>
+    
+    champ.name.slice(0,inputValue.length) === inputValue);
+    console.log(arraySearchChampions);
+    return arraySearchChampions;
 
+};
 

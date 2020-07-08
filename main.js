@@ -1,4 +1,5 @@
 import { filterTag } from './data.js';
+import {filterSearch} from './data.js';
 import { orderInfo } from './data.js';
 import lol from './data/lol/lol.js';
 
@@ -47,6 +48,17 @@ function valueOrderInformation() {
   }
 }
 selectList.addEventListener('change', valueOrderInformation);
+
+const inputSearch = document.getElementById("inputSearch");
+
+function valueSearcher(){
+  const inputValue= inputSearch.value;
+  console.log(inputValue);
+  renderChampionsInScreen(filterSearch(champions,inputValue));
+ 
+}
+
+inputSearch.addEventListener('keyup', valueSearcher);
 
 
 
