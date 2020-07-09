@@ -67,3 +67,26 @@ function valueSearcher() {
 }
 
 inputSearch.addEventListener('keyup', valueSearcher);
+
+//parte del modal 
+const renderModalChampions = (arrayOfChampions) => {
+  document.getElementById('containerModals').innerHTML = arrayOfChampions.map(champ =>{
+    if (champ.name === event.target.name) {
+    `<div class="modalEachChamp">
+    <p> ${champ.name.toUpperCase()}</p><br>
+    <div id="containerModalPic"> 
+      <img id="modaPic" src="${champ.splash}">
+    </div><br>
+    <p> ${champ.title}</p><br>
+    <p>${champ.blurb}</p><br>
+    <div id="containerInfoModal">
+     <p>${champ.info}</p>
+    </div>
+    <div id="containerStatsModal">
+     <p>${champ.stats}</p>
+    </div>`};
+});
+return console.log(event.target.name);
+}
+
+document.querySelector("#allTheChamps").addEventListener('click', renderModalChampions);

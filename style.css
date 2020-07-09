@@ -21,11 +21,13 @@
 html{
     font-family:themillion;
 }
+
 .background{
     background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
     background-position: center;
     background-attachment: fixed;
 }
+
 #containerAsideMain{
     margin-top: 110px;
 }
