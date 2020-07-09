@@ -25,7 +25,7 @@ renderChampionsInScreen(champions);
 // seleccion todos los filtros tag
 const checkbox = document.querySelector('#checkboxTags');
 
-// función que recoge nombre del tag escogido
+// función que recoge nombre del tag escogido e imprime
 function valueFilterTag() {
   if (document.querySelector('#checkboxTags :checked') !== null) {
     const tagValue = document.querySelector('#checkboxTags :checked').value;
@@ -38,6 +38,7 @@ checkbox.addEventListener('change', valueFilterTag);
 // seleccionar filtros de informacion
 const selectList = document.querySelector('#selectInformation');
 
+// funcion que recoge el input escodigo e imprime
 function valueOrderInformation() {
   if (selectList !== null) {
     const valueSelectInformation = selectList.value;
@@ -46,8 +47,8 @@ function valueOrderInformation() {
 }
 selectList.addEventListener('change', valueOrderInformation);
 
-// FILTROS FUNCIONANDO JUNTOS
-function mixFilterTagInformation () {
+// FILTROS FUNCIONANDO JUNTOS (al mismo tiempo)
+function mixFilterTagInformation() {
   if (document.querySelector('#checkboxTags :checked') !== null && selectList !== null) {
     const tagValue = document.querySelector('#checkboxTags :checked').value;
     const valueSelectInformation = selectList.value;
@@ -59,6 +60,7 @@ selectList.addEventListener('change', mixFilterTagInformation);
 // SEARCHER
 const inputSearch = document.getElementById('inputSearch');
 
+// funcion que recoge input de busqueda y va filtrando automaticamente
 function valueSearcher() {
   const inputValue = inputSearch.value.toUpperCase();
   renderChampionsInScreen(filterSearch(champions, inputValue));

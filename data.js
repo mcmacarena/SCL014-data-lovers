@@ -5,6 +5,7 @@ export const filterTag = (champions, tagValue) => {
   return arrayChampionsTag;
 };
 
+// función para ordenar por info
 export const orderInfo = (champions, valueSelectInformation) => {
   const arrayChampionsInformation = champions.sort((a, b) => {
     if (a.info[valueSelectInformation] < b.info[valueSelectInformation]) {
@@ -16,6 +17,7 @@ export const orderInfo = (champions, valueSelectInformation) => {
   return arrayChampionsInformation;
 };
 
+// funcion para filtrar barra de busqueda
 export const filterSearch = (champions, inputValue) => {
   const arraySearchChampions = champions.filter(champ =>
     ((champ.name).toUpperCase()).slice(0, inputValue.length) === inputValue);
