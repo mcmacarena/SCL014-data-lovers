@@ -8,14 +8,16 @@ const champions = Object.values(lol.data);
 const renderChampionsInScreen = (arrayOfChampions) => {
   document.getElementById('allTheChamps').innerHTML = arrayOfChampions.map(champ =>
     `<div class="containerEachChamp">
-      <p> ${champ.name.toUpperCase()}</p><br>
+      <p>${champ.name.toUpperCase()}</p><br>
       <div id="containerProfilePic"> 
         <img id="profilePic" src="${champ.splash}">
       </div><br>
       <p> [${champ.tags}]</p><br>
       <p><img id="attack" src="img/Melee_role.png"> ${champ.info.attack}&nbsp&nbsp<img id="defense" src="img/Armor_icon.png"> ${champ.info.defense}</p>
       <p><img id="magic" src="img/Mana_regeneration_icon.png">${champ.info.magic} &nbsp&nbsp<img id="difficulty" src="img/Champion_style_abilities_active.png">${champ.info.difficulty}</p>
-    </div>`).join('');
+      <div class="containerModals">
+      </div>
+      </div>`).join('');
 };
 
 // imprimir todos
@@ -69,24 +71,48 @@ function valueSearcher() {
 inputSearch.addEventListener('keyup', valueSearcher);
 
 //parte del modal 
-const renderModalChampions = (arrayOfChampions) => {
-  document.getElementById('containerModals').innerHTML = arrayOfChampions.map(champ =>{
-    if (champ.name === event.target.name) {
-    `<div class="modalEachChamp">
-    <p> ${champ.name.toUpperCase()}</p><br>
-    <div id="containerModalPic"> 
-      <img id="modaPic" src="${champ.splash}">
-    </div><br>
-    <p> ${champ.title}</p><br>
-    <p>${champ.blurb}</p><br>
-    <div id="containerInfoModal">
-     <p>${champ.info}</p>
-    </div>
-    <div id="containerStatsModal">
-     <p>${champ.stats}</p>
-    </div>`};
-});
-return console.log(event.target.name);
+
+const renderModalChampions = () => {
+  
+  for (let i = 0; i < champions.length; i++) {
+    if ((champions[i].name).toUpperCase() === event.target.firstElementChild.innerHTML){
+     
+  
+  event.target.querySelector('.containerModals').innerHTML=`<div class="modalEachChamp">
+  <p> ${champions[i].name.toUpperCase()}</p><br>
+  <div id="containerModalPic"> 
+    <img id="modaPic" src="${champions[i].splash}">
+  </div><br>
+  <p> ${champions[i].title}</p><br>
+  <p>${champions[i].blurb}</p><br>
+  <div id="containerInfoModal">
+   <p>attack:${champions[i].info.attack}</p>
+   <p>defense:${champions[i].info.defense}</p>
+   <p>magic:${champions[i].info.magic}</p>
+   <p>difficulty:${champions[i].info.difficulty}</p>
+  </div>
+  <div id="containerStatsModal">
+   <p>hp:${champions[i].stats.hp}</p>
+   <p>mp:${champions[i].stats.mp}</p>
+   <p>movespeed:${champions[i].stats.movespeed}</p>
+   <p>armor:${champions[i].stats.armor}</p>
+   <p>attackrange:${champions[i].stats.attackrange}</p>
+   <p>hpregen:${champions[i].stats.hpregen}</p>
+   <p>mpregen:${champions[i].stats.mpregen}</p>
+   <p>attackdamage:${champions[i].stats.attackdamage}</p>
+  </div>
+  </div>`
+}
 }
 
+ 
+}; 
+
 document.querySelector("#allTheChamps").addEventListener('click', renderModalChampions);
+
+// let nameClickChampion = event.target.firstElementChild.innerHTML;
+// for (let i = 0; i < champions.length; i++) {
+//   if (nameClickChampion === ((champions[i].name).toUpperCase)){
+//     console.log("oli") 
+//   }   
+// }

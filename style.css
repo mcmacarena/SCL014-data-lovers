@@ -131,19 +131,12 @@ input[type="search"]:hover{
     cursor: pointer;
 }
 
-/* iconos */
-.fa-gavel{
-    color: rgb(129, 3, 3);
+.modalEachChamp{
+    /* display: none; */
 }
 
-.fa-shield-alt{
-    color: rgb(5, 116, 99);
+.containerModals{
+    background-color: rgb(17, 17, 17, 0.85);
+    border: 1px solid #C6923C;
 }
 
-.fa-flask{
-    color: rgb(00, 72, 139);
-}
-
-.fa-exclamation-triangle{
-    color:rgb(214, 158, 67);
-}
