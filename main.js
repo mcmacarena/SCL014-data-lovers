@@ -73,12 +73,13 @@ inputSearch.addEventListener('keyup', valueSearcher);
 //parte del modal 
 
 const renderModalChampions = () => {
-  
+  event.target.querySelector('.containerModals').style.display='block';
   for (let i = 0; i < champions.length; i++) {
     if ((champions[i].name).toUpperCase() === event.target.firstElementChild.innerHTML){
      
   
   event.target.querySelector('.containerModals').innerHTML=`<div class="modalEachChamp">
+  <span class="close">&times;</span>
   <p> ${champions[i].name.toUpperCase()}</p><br>
   <div id="containerModalPic"> 
     <img id="modaPic" src="${champions[i].splash}">
@@ -103,16 +104,20 @@ const renderModalChampions = () => {
   </div>
   </div>`
 }
-}
 
- 
-}; 
+}
+window.onclick = function(event) {
+  if (event.target == document.querySelector('.containerModals')){
+    document.querySelector('.containerModals').style.display = "none";
+  }
+}
+};
+
+
 
 document.querySelector("#allTheChamps").addEventListener('click', renderModalChampions);
 
-// let nameClickChampion = event.target.firstElementChild.innerHTML;
-// for (let i = 0; i < champions.length; i++) {
-//   if (nameClickChampion === ((champions[i].name).toUpperCase)){
-//     console.log("oli") 
-//   }   
-// }
+
+// document.querySelector('.close').addEventListener('click', () => {
+//   document.querySelector('.containerModals').style.display='none';
+// });
