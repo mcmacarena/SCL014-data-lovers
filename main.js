@@ -78,26 +78,30 @@ const showModalChampion = () => {
         <span class="close">&times;</span>
       <p> ${champions[i].name.toUpperCase()}</p><br>
       <div id="containerModalPic"> 
-        <img id="modaPic" src="${champions[i].splash}">
+        <img id="modalPic" src="${champions[i].splash}">
       </div><br>
       <p> ${champions[i].title}</p><br>
       <p>${champions[i].blurb}</p><br>
-      <div id="containerInfoModal">
-        <p>attack:${champions[i].info.attack}</p>
-        <p>defense:${champions[i].info.defense}</p>
-        <p>magic:${champions[i].info.magic}</p>
-        <p>difficulty:${champions[i].info.difficulty}</p>
-      </div>
-      <div id="containerStatsModal">
-        <p>hp:${champions[i].stats.hp}</p>
-        <p>mp:${champions[i].stats.mp}</p>
-        <p>movespeed:${champions[i].stats.movespeed}</p>
-        <p>armor:${champions[i].stats.armor}</p>
-        <p>attackrange:${champions[i].stats.attackrange}</p>
-        <p>hpregen:${champions[i].stats.hpregen}</p>
-        <p>mpregen:${champions[i].stats.mpregen}</p>
-        <p>attackdamage:${champions[i].stats.attackdamage}</p>
-      </div>
+      <div id="containersWithText">
+        <div id="containerInfoModal">
+         <p>Info: </p><br>
+         <p>attack:${champions[i].info.attack}</p>
+         <p>defense:${champions[i].info.defense}</p>
+         <p>magic:${champions[i].info.magic}</p>
+         <p>difficulty:${champions[i].info.difficulty}</p>
+       </div>
+       <div id="containerStatsModal">
+         <p>Stats: </p><br>
+         <p>hp:${champions[i].stats.hp}</p>
+         <p>mp:${champions[i].stats.mp}</p>
+         <p>movespeed:${champions[i].stats.movespeed}</p>
+         <p>armor:${champions[i].stats.armor}</p>
+         <p>attackrange:${champions[i].stats.attackrange}</p>
+         <p>hpregen:${champions[i].stats.hpregen}</p>
+         <p>mpregen:${champions[i].stats.mpregen}</p>
+         <p>attackdamage:${champions[i].stats.attackdamage}</p>
+        </div>
+     </div>
     </div>`;
     }
   }
