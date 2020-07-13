@@ -130,17 +130,18 @@ input[type="search"]:hover{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 .modalEachChamp{
     color: rgb(207, 207, 207);
     margin: auto;
     padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 80%;
+    width: 70%;
     background-color: rgb(17, 17, 17);
     border: 1px solid #C6923C;
-    /* overflow: auto; */
-    height: 550px;  
+    display: flex;
+    flex-direction: column;
 }
 #containerModalPic{
     height: 300px;
@@ -155,16 +156,66 @@ input[type="search"]:hover{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    align-self: flex-end;
 }
-#containersWithText{
+#containerPhotoAndStats{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    line-height: initial ;
+    justify-content: space-around;
 }
-#containerInfoModal, #containerStatsModal{
+#containerStatsModal{
+    /* border: 1px solid #C6923C; */
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 500px;
+}
+#healthInfo, #manaInfo, #attackInfo, #otherInfo{
     border: 1px solid #C6923C;
     border-radius: 10px;
-    padding: 25px;
-    align-content: stretch;
+    padding: 15px;
+    margin: 10px;
+}
+#healthInfo,#manaInfo{
+    width:150px;
+}
+#attackInfo,#otherInfo{
+    width:190px; 
+}
+#subcontainerStats{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.containerModalName{
+    align-self:  center;
+    font-size: 30px;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+/* @media screen and (max-width:1023px) and (min-width:768px){
+
+}
+/* small tablet */
+/* @media screen and (max-width:767px) and (min-width:600px){
+
+} */ 
+/* mobile */
+@media screen and (max-width:599px) and (min-width:320px){
+    .background{
+        background-color: black;
+        background-image: none;
+    }
+    header {
+        position: fixed;
+        height: 100px;
+        /* width: 100%; */
+        background-color: yellow;
+         /* rgb(004,012,023) ;  */
+    }
+
 }

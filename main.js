@@ -19,7 +19,6 @@ const renderChampionsInScreen = (arrayOfChampions) => {
       </div>
       </div>`).join('');
 };
-
 // imprimir todos
 renderChampionsInScreen(champions);
 
@@ -76,30 +75,40 @@ const showModalChampion = () => {
       actualModal.innerHTML = 
       `<div class="modalEachChamp">
         <span class="close">&times;</span>
-      <p> ${champions[i].name.toUpperCase()}</p><br>
-      <div id="containersWithText">
-      <div id="containerModalPic"> 
-        <img id="modalPic" src="${champions[i].splash}">
-      </div><br>
-        <div id="containerInfoModal">
-         <p>INFO: </p><br>
-         <p>attack: ${champions[i].info.attack}</p>
-         <p>defense: ${champions[i].info.defense}</p>
-         <p>magic: ${champions[i].info.magic}</p>
-         <p>difficulty: ${champions[i].info.difficulty}</p>
-       </div>
-       <div id="containerStatsModal">
-         <p>STATS: </p><br>
-         <p>hp: ${champions[i].stats.hp}</p>
-         <p>mp: ${champions[i].stats.mp}</p>
-         <p>movespeed: ${champions[i].stats.movespeed}</p>
-         <p>armor: ${champions[i].stats.armor}</p>
-         <p>attackrange: ${champions[i].stats.attackrange}</p>
-         <p>hpregen: ${champions[i].stats.hpregen}</p>
-         <p>mpregen: ${champions[i].stats.mpregen}</p>
-         <p>attackdamage: ${champions[i].stats.attackdamage}</p>
+        <div class="containerModalName">
+          <p> ${champions[i].name.toUpperCase()}</p><br><br>
+        </div>
+      <div id="containerPhotoAndStats">
+        <div id="containerModalPic"> 
+          <img id="modalPic" src="${champions[i].splash}">
+        </div><br>
+        <div id="containerStatsModal">
+          <div id="subcontainerStats">
+            <div id="healthInfo">
+              <p>Health: </p><br>
+              <p>hp: ${champions[i].stats.hp}</p>
+              <p>hpregen: ${champions[i].stats.hpregen}</p>
+            </div>
+            <div id="attackInfo">
+              <p>Attack: </p><br>
+              <p>attackrange: ${champions[i].stats.attackrange}</p>
+              <p>attackdamage: ${champions[i].stats.attackdamage}</p>
+            </div>
+            <div id="manaInfo">
+              <p>Mana: </p><br>
+              <p>mp: ${champions[i].stats.mp}</p>
+              <p>mpregen: ${champions[i].stats.mpregen}</p>
+            </div>
+            
+            <div id="otherInfo">
+              <p>Others: </p><br>
+              <p>movespeed: ${champions[i].stats.movespeed}</p>
+              <p>armor: ${champions[i].stats.armor}</p>
+            </div>
+          </div>
         </div>
      </div>
+      <br>
       <p> ${champions[i].title}</p><br>
       <p>${champions[i].blurb}</p><br>
     </div>`;
