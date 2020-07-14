@@ -192,7 +192,7 @@ input[type="search"]:hover{
 }
 .containerModalName{
     align-self:  center;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 /* RESPONSIVE */
@@ -207,15 +207,49 @@ input[type="search"]:hover{
 /* mobile */
 @media screen and (max-width:599px) and (min-width:320px){
     .background{
-        background-color: black;
-        background-image: none;
+      background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
+      background-position: center;
+      background-attachment: fixed; 
     }
     header {
         position: fixed;
-        height: 100px;
+        height: 50px;
         /* width: 100%; */
-        background-color: yellow;
-         /* rgb(004,012,023) ;  */
+    }
+    .pag_name{
+        color: rgb(198,146,060);
+        font-size: 12.5px;
+    }
+    img[src="img/logo_lol.png"]{
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+    }
+    aside{
+        position: fixed;
+        width: 80px;
+        height: 100%;
+        padding: 5px;
+        line-height: 15px;
+        margin-top: 50px;
+        padding-left: 15px; 
+        background-color:rgb(004,012,023);
+        color:rgb(194, 194, 194);
+        font-size: 9px;
+        display: flex;
+        flex-direction: column;
+    } 
+    label[for=" "]{
+        margin-bottom: 5px;
+        color: rgb(198,146,060);
     }
 
+}
+
+.infoBlurb{
+    text-align: center;
+}
+.titleChamp{
+    font-size: 30px;
+    text-align: center;
 }

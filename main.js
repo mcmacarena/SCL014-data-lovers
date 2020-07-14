@@ -109,8 +109,8 @@ const showModalChampion = () => {
         </div>
      </div>
       <br>
-      <p> ${champions[i].title}</p><br>
-      <p>${champions[i].blurb}</p><br>
+      <p class="titleChamp"> ${champions[i].title}</p><br>
+      <p class="infoBlurb">${champions[i].blurb}</p><br>
     </div>`;
     }
   }
