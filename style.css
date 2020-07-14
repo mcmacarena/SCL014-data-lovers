@@ -145,12 +145,14 @@ input[type="search"]:hover{
     font-size: 18px;
 }
 #containerModalPic{
-    height: 300px;
+    height: auto;
     width: 500px;
+    align-content: center;
+    margin:10px;
 }
 #modalPic{
     width:100%;
-    border-radius:8px ; 
+    border-radius:8px ;
 }
 .close {
     color: #aaaaaa;
@@ -162,7 +164,7 @@ input[type="search"]:hover{
 #containerPhotoAndText{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 #textContainer{
     display: flex;
@@ -171,11 +173,14 @@ input[type="search"]:hover{
     justify-content: center;
 }
 #containerStatsModal{
-    /* border: 1px solid #C6923C; */
-    border-radius: 8px;
-    padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#containerHealthAttack, #containerManaOther{
+    display: flex;
+    flex-direction:row;
     flex-wrap: wrap;
 }
 #healthInfo, #manaInfo, #attackInfo, #otherInfo{
@@ -192,8 +197,6 @@ input[type="search"]:hover{
 }
 #subcontainerStats{
     display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
     justify-content: center;
 }
 .containerModalName{
@@ -204,8 +207,8 @@ input[type="search"]:hover{
     text-align: center;
 }
 .titleChamp{
-    font-size: 30px;
-    text-align: center;
+    font-size: 25px;
+    font-style: italic;
 }
 
 /* RESPONSIVE */
@@ -268,7 +271,15 @@ input[type="search"]:hover{
     .iconCard{
         width:15px;
     }
-
+    .modalEachChamp{
+        font-size: 17px;
+    }
+    .titleChamp{
+        font-size: 22px;
+    }
+    .containerModalName{
+        font-size: 35px;
+    }
 }
 
 /* small tablet */
@@ -330,6 +341,25 @@ input[type="search"]:hover{
     .iconCard{
         width:10px;
     }
+    .modalEachChamp{
+        line-height: 15px;
+        font-size: 15px;
+    }
+    .titleChamp{
+        font-size: 22px;
+    }
+    .containerModalName{
+        font-size: 35px;
+    }
+    #healthInfo,#manaInfo{
+        width:120px;
+    }
+    #attackInfo,#otherInfo{
+        width:150px; 
+    }
+    #containerModalPic{
+        width: 600px;
+    }
 } 
 /* mobile */
 @media screen and (max-width:599px) and (min-width:320px){
@@ -388,5 +418,30 @@ input[type="search"]:hover{
     .iconCard{
         width:10px;
     }
+    .modalEachChamp{
+        line-height: 15px;
+        font-size: 15px;
+    }
+    #containerPhotoAndText{
+        flex-direction: column;
+    }
+    .titleChamp{
+        font-size: 22px;
+    }
+    .containerModalName{
+        font-size: 35px;
+    }
+    #healthInfo,#manaInfo{
+        width:120px;
+    }
+    #attackInfo,#otherInfo{
+        width:150px; 
+    }
+    #containerModalPic{
+        width: 220px;
+        margin: auto;
+    }
+    #textContainer{
+        width: 220px;
+    }
 }
-

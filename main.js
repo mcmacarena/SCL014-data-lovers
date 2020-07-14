@@ -12,7 +12,7 @@ const renderChampionsInScreen = (arrayOfChampions) => {
       <div id="containerProfilePic"> 
         <img id="profilePic" src="${champ.splash}">
       </div><br>
-      <p> [${champ.tags.join(' ')}]</p><br>
+      <p> [${champ.tags}]</p><br>
       <p><img class="iconCard" src="img/Melee_role.png"> ${champ.info.attack}&nbsp&nbsp<img class="iconCard" src="img/Armor_icon.png"> ${champ.info.defense}</p>
       <p><img class="iconCard" src="img/Mana_regeneration_icon.png">${champ.info.magic} &nbsp&nbsp<img class="iconCard" src="img/Champion_style_abilities_active.png">${champ.info.difficulty}</p>
       <div class="containerModal">
@@ -76,46 +76,42 @@ const showModalChampion = () => {
       `<div class="modalEachChamp">
         <span class="close">&times;</span>
         <div class="containerModalName">
-          <p> ${champions[i].name.toUpperCase()}</p><br><br>
+          <p> ${champions[i].name.toUpperCase()}</p><br>
+          <p class="titleChamp"> ${champions[i].title}</p><br>
         </div>
       <div id="containerPhotoAndText">
         <div id="containerModalPic"> 
           <img id="modalPic" src="${champions[i].splash}">
         </div><br>
         <div id="textContainer">
-          <p class="titleChamp"> ${champions[i].title}</p><br>
           <p class="infoBlurb">${champions[i].blurb}</p><br>
         </div>
       </div>
       <div id="containerStatsModal">
-        <div id="subcontainerStats">
-        <div id='prueba1'>
-          <div id="healthInfo">
-            <p>Health: </p><br>
-            <p>hp: ${champions[i].stats.hp}</p>
-            <p>hpregen: ${champions[i].stats.hpregen}</p>
+          <div id='containerHealthAttack'>
+            <div id="healthInfo">
+              <p>Health: </p><br>
+              <p>hp: ${champions[i].stats.hp}</p>
+              <p>hpregen: ${champions[i].stats.hpregen}</p>
+            </div>
+            <div id="attackInfo">
+              <p>Attack: </p><br>
+              <p>attackrange: ${champions[i].stats.attackrange}</p>
+              <p>attackdamage: ${champions[i].stats.attackdamage}</p>
+            </div>  
           </div>
-          <div id="manaInfo">
-            <p>Mana: </p><br>
-            <p>mp: ${champions[i].stats.mp}</p>
-            <p>mpregen: ${champions[i].stats.mpregen}</p>
-          </div>  
-          
+          <div id='containerManaOther'>
+            <div id="manaInfo">
+              <p>Mana: </p><br>
+              <p>mp: ${champions[i].stats.mp}</p>
+              <p>mpregen: ${champions[i].stats.mpregen}</p>
+            </div>      
+            <div id="otherInfo">
+              <p>Others: </p><br>
+              <p>movespeed: ${champions[i].stats.movespeed}</p>
+              <p>armor: ${champions[i].stats.armor}</p>
+            </div>
           </div>
-          <div id='prueba2'>
-          
-          <div id="attackInfo">
-            <p>Attack: </p><br>
-            <p>attackrange: ${champions[i].stats.attackrange}</p>
-            <p>attackdamage: ${champions[i].stats.attackdamage}</p>
-          </div>      
-          <div id="otherInfo">
-            <p>Others: </p><br>
-            <p>movespeed: ${champions[i].stats.movespeed}</p>
-            <p>armor: ${champions[i].stats.armor}</p>
-          </div>
-          </div>
-        </div>        
       </div>
     </div>
     <br>
