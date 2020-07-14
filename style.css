@@ -124,7 +124,7 @@ input[type="search"]:hover{
     display: none;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -142,6 +142,7 @@ input[type="search"]:hover{
     border: 1px solid #C6923C;
     display: flex;
     flex-direction: column;
+    font-size: 18px;
 }
 #containerModalPic{
     height: 300px;
@@ -158,10 +159,16 @@ input[type="search"]:hover{
     font-weight: bold;
     align-self: flex-end;
 }
-#containerPhotoAndStats{
+#containerPhotoAndText{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+#textContainer{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
 }
 #containerStatsModal{
     /* border: 1px solid #C6923C; */
@@ -170,7 +177,6 @@ input[type="search"]:hover{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 500px;
 }
 #healthInfo, #manaInfo, #attackInfo, #otherInfo{
     border: 1px solid #C6923C;
@@ -194,58 +200,6 @@ input[type="search"]:hover{
     align-self:  center;
     font-size: 40px;
 }
-
-/* RESPONSIVE */
-/* Tablet */
-/* @media screen and (max-width:1023px) and (min-width:768px){
-
-}
-/* small tablet */
-/* @media screen and (max-width:767px) and (min-width:600px){
-
-} */ 
-/* mobile */
-@media screen and (max-width:599px) and (min-width:320px){
-    .background{
-      background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
-      background-position: center;
-      background-attachment: fixed; 
-    }
-    header {
-        position: fixed;
-        height: 50px;
-        /* width: 100%; */
-    }
-    .pag_name{
-        color: rgb(198,146,060);
-        font-size: 12.5px;
-    }
-    img[src="img/logo_lol.png"]{
-        cursor: pointer;
-        height: 50px;
-        width: 50px;
-    }
-    aside{
-        position: fixed;
-        width: 80px;
-        height: 100%;
-        padding: 5px;
-        line-height: 15px;
-        margin-top: 50px;
-        padding-left: 15px; 
-        background-color:rgb(004,012,023);
-        color:rgb(194, 194, 194);
-        font-size: 9px;
-        display: flex;
-        flex-direction: column;
-    } 
-    label[for=" "]{
-        margin-bottom: 5px;
-        color: rgb(198,146,060);
-    }
-
-}
-
 .infoBlurb{
     text-align: center;
 }
@@ -253,3 +207,186 @@ input[type="search"]:hover{
     font-size: 30px;
     text-align: center;
 }
+
+/* RESPONSIVE */
+/* Tablet */
+@media screen and (max-width:900px) and (min-width:768px){
+    header {
+        height: 70px;
+        position: fixed;
+    }
+    .pag_name{
+        font-size: 12.5px;
+    }
+    img[src="img/logo_lol.png"]{
+        height: 50px;
+        width: 50px;
+    }
+    aside{
+        width: 120px;
+        padding: 5px;
+        line-height: 20px;
+        margin-top: 70px;
+        padding-left: 15px; 
+        font-size: 12px;
+    } 
+    label[for=" "]{
+        margin-bottom: 5px;
+    }
+    #selectInformation{
+        font-size: 10px;
+    }
+    .searcher{
+        padding-top: 100px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        margin-left: 140px;
+    } 
+    input[type="search"]{
+        padding: 4px 9px 4px 102px;
+        font-size: 13px;
+        width: 300px;
+        height: 35px;
+        background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    } 
+    #allTheChamps{
+        margin-left: 140px;
+    }
+    #containerProfilePic{
+        height: auto;
+        width: 173px;
+    }
+    .containerEachChamp{
+        line-height: 15px;
+        height: 262px;
+        width: 188px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+    .iconCard{
+        width:15px;
+    }
+
+}
+
+/* small tablet */
+@media screen and (max-width:767px) and (min-width:600px){
+    header {
+        height: 50px;
+        position: fixed;
+    }
+    .pag_name{
+        font-size: 12.5px;
+    }
+    img[src="img/logo_lol.png"]{
+        height: 50px;
+        width: 50px;
+    }
+    aside{
+        width: 80px;
+        padding: 5px;
+        line-height: 15px;
+        margin-top: 50px;
+        padding-left: 15px; 
+        font-size: 9px;
+    } 
+    label[for=" "]{
+        margin-bottom: 5px;
+    }
+    #selectInformation{
+        font-size: 10px;
+    }
+    .searcher{
+        padding-top: 80px;
+        margin-bottom: 30px;
+        font-size: 10px;
+        margin-left: 100px;
+    } 
+    input[type="search"]{
+        padding: 4px 9px 4px 67.5px;
+        font-size: 12px;
+        width: 270px;
+        height: 35px;
+        background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    } 
+    #allTheChamps{
+        margin-left: 100px;
+    }
+    #containerProfilePic{
+        height: auto;
+        width: 115px;
+    }
+    .containerEachChamp{
+        line-height: 10px;
+        height: 175px;
+        width: 125px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        font-size: 10px;
+    }
+    .iconCard{
+        width:10px;
+    }
+} 
+/* mobile */
+@media screen and (max-width:599px) and (min-width:320px){
+    header {
+        height: 50px;
+        position: fixed;
+    }
+    .pag_name{
+        font-size: 12.5px;
+    }
+    img[src="img/logo_lol.png"]{
+        height: 50px;
+        width: 50px;
+    }
+    aside{
+        /* width: 80px;
+        padding: 5px;
+        line-height: 15px;
+        margin-top: 50px;
+        padding-left: 15px; 
+        font-size: 9px; */
+        display: none;
+    } 
+    label[for=" "]{
+        margin-bottom: 5px;
+    }
+    .searcher{
+        padding-top: 80px;
+        margin-bottom: 30px;
+        font-size: 10px;
+        margin-left: auto;
+    } 
+    input[type="search"]{
+        padding: 4px 9px 4px 67.5px;
+        font-size: 12px;
+        width: 270px;
+        height: 35px;
+        background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
+    } 
+    #allTheChamps{
+        margin-left: auto;
+    }
+    #containerProfilePic{
+        height: auto;
+        width: 115px;
+    }
+    .containerEachChamp{
+        line-height: 10px;
+        height: 175px;
+        width: 125px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        font-size: 10px;
+    }
+    .iconCard{
+        width:10px;
+    }
+}
+
