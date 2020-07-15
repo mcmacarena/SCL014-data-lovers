@@ -11,32 +11,36 @@
       <div class="log_img">
         <img src="img/logo_lol.png" alt="logo">
       </div>
-      <div class="pag_name">
-        <h1>League Pickup</h1>
-      </div>
     </header>
     <!--Sección de filtros-->
-    <aside class="filter">
+    <aside id="filter" class=" ">
       <br>
-      <label for=" ">Tags </label>
-      <div id="checkboxTags">
-        <label><input name="filterTag" type="radio" id="assasin" value="Assassin"> Assassin</label><br>
-        <label><input name="filterTag" type="radio" id="fighter" value="Fighter" > Fighter</label><br>
-        <label><input name="filterTag" type="radio" id="mage" value="Mage"> Mage</label><br>
-        <label><input name="filterTag" type="radio" id="marksman" value="Marksman"> Marksman</label><br>
-        <label><input name="filterTag" type="radio" id="support" value="Support"> Support</label><br>          
-        <label><input name="filterTag" type="radio" id="tank" value="Tank" > Tank</label><br>
-      </div>
-      <br>
-      <label for=" ">Information <i class="fas fa-sort-amount-down"></i></i></label>
-      <select id="selectInformation">
-        <option value="default" selected> Choose your option</option> 
-        <option value="attack"> Attack </option> 
-        <option value="defense"> Defense</option>
-        <option value="magic"> Magic</option>
-        <option value="difficulty"> Difficulty</option>
-      </select>    
-    </aside>
+      <div id="contentAside">
+        <div class="toggle"><span>&#8801;</span></div>
+        <label for=" ">Tags  </label>
+        <div id="checkboxTags">
+           <label for="tag"><input name="filterTag" type="radio" id="assasin" value="Assassin"> Assassin </label><br>
+           <label for="tag"><input name="filterTag" type="radio" id="fighter" value="Fighter" > Fighter</label><br>
+           <label for="tag"><input name="filterTag" type="radio" id="mage" value="Mage"> Mage</label><br>
+           <label for="tag"><input name="filterTag" type="radio" id="marksman" value="Marksman"> Marksman</label><br>
+           <label for="tag"><input name="filterTag" type="radio" id="support" value="Support"> Support</label><br>          
+           <label for="tag"><input name="filterTag" type="radio" id="tank" value="Tank" > Tank </label><br>
+          </div>
+          <br>
+          <label for=" ">Skills order<i class="fas fa-sort-amount-down"></i></i></label><br>
+          <select id="selectInformation">
+             <option value="default" > Select abilities</option> 
+             <option value="attack"> Attack ⚔️</option> 
+             <option value="defense"> Defense 🛡️</option>
+             <option value="magic"> Magic 🔮</option>
+             <option value="difficulty"> Difficulty ⚠️</option>
+            </select>   
+        </div>
+        <br>
+        <label for=" ">Reset Filter  </label>
+        <button class='btnClear'>Clear</button>
+     </aside>
+    
     <!--Sección del buscador-->
 
       <div class="searcher">

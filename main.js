@@ -13,8 +13,8 @@ const renderChampionsInScreen = (arrayOfChampions) => {
         <img id="profilePic" src="${champ.splash}">
       </div><br>
       <p> [${champ.tags}]</p><br>
-      <p><img class="iconCard" src="img/Melee_role.png"> ${champ.info.attack}&nbsp&nbsp<img class="iconCard" src="img/Armor_icon.png"> ${champ.info.defense}</p>
-      <p><img class="iconCard" src="img/Mana_regeneration_icon.png">${champ.info.magic} &nbsp&nbsp<img class="iconCard" src="img/Champion_style_abilities_active.png">${champ.info.difficulty}</p>
+      <p> ⚔️${champ.info.attack} &nbsp&nbsp 🛡️${champ.info.defense}</p>
+      <p> 🔮${champ.info.magic} &nbsp&nbsp ⚠️${champ.info.difficulty}</p>
       <div class="containerModal">
       </div>
       </div>`).join('');
@@ -65,6 +65,21 @@ function valueSearcher() {
 }
 inputSearch.addEventListener('keyup', valueSearcher);
 
+//BOTON PARA LIMPIAR FILTROS
+const btnClear= document.querySelector('.btnClear');
+function clearFilter(){
+  location.reload(true);
+}
+
+btnClear.addEventListener('click',clearFilter)
+
+
+// Aside desplegable
+const btnToggle= document.querySelector('.toggle');
+btnToggle.addEventListener('click', () => {
+  document.getElementById('filter').classList.toggle('active');
+});
+
 // MODAL
 const showModalChampion = () => {
   const actualModal = event.target.querySelector('.containerModal');
@@ -90,24 +105,24 @@ const showModalChampion = () => {
       <div id="containerStatsModal">
           <div id='containerHealthAttack'>
             <div id="healthInfo">
-              <p>Health: </p><br>
+              <p>❤️Health: </p><br>
               <p>hp: ${champions[i].stats.hp}</p>
               <p>hpregen: ${champions[i].stats.hpregen}</p>
             </div>
             <div id="attackInfo">
-              <p>Attack: </p><br>
+              <p>⚔️Attack: </p><br>
               <p>attackrange: ${champions[i].stats.attackrange}</p>
               <p>attackdamage: ${champions[i].stats.attackdamage}</p>
             </div>  
           </div>
           <div id='containerManaOther'>
             <div id="manaInfo">
-              <p>Mana: </p><br>
+              <p>💙Mana: </p><br>
               <p>mp: ${champions[i].stats.mp}</p>
               <p>mpregen: ${champions[i].stats.mpregen}</p>
             </div>      
             <div id="otherInfo">
-              <p>Others: </p><br>
+              <p>➕Others: </p><br>
               <p>movespeed: ${champions[i].stats.movespeed}</p>
               <p>armor: ${champions[i].stats.armor}</p>
             </div>

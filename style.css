@@ -6,8 +6,6 @@
     /* sacar el padding y margin por defecto de los navegadores */
     margin:0;
     padding: 0;
-    /* #193747,#0B1B25, rgb(004,012,023));  */
-    /* celeste rgba(8, 162, 162, 0.788) */
 }
 html{
     font-family:themillion;
@@ -16,10 +14,6 @@ html{
     background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
     background-position: center;
     background-attachment: fixed;
-}
-
-#containerAsideMain{
-    margin-top: 110px;
 }
 /* HEADER */
 header {
@@ -32,14 +26,11 @@ header {
     justify-content: center;
     align-items: center;
 }
-.pag_name{
-    color: rgb(198,146,060);
-    font-size: 25px;
-}
 img[src="img/logo_lol.png"]{
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 350px;
+    margin-left: 150px;
 }
 /* BODY */
 aside{
@@ -59,6 +50,25 @@ aside{
 label[for=" "]{
     margin-bottom: 10px;
     color: rgb(198,146,060);
+    font-size: 20px;
+}
+label[for="tag"]{
+    font-size: 16px;
+}
+select,option,.btnClear{
+    font-size: 15px ;
+    font-family:themillion;
+    background-color: rgb(17, 17, 17, 0.85);
+    color: white;
+    border: 1px solid rgb(198,146,060);
+    padding: 5px;
+    width:140px;
+}
+#containerAsideMain{
+    margin-top: 110px;
+}
+.toggle{
+    visibility: hidden;
 }
 .searcher{
     display: flex;
@@ -211,6 +221,7 @@ input[type="search"]:hover{
     font-style: italic;
 }
 
+
 /* RESPONSIVE */
 /* Tablet */
 @media screen and (max-width:900px) and (min-width:768px){
@@ -218,12 +229,8 @@ input[type="search"]:hover{
         height: 70px;
         position: fixed;
     }
-    .pag_name{
-        font-size: 12.5px;
-    }
     img[src="img/logo_lol.png"]{
-        height: 50px;
-        width: 50px;
+        width: 250px;
     }
     aside{
         width: 120px;
@@ -268,9 +275,6 @@ input[type="search"]:hover{
         margin-bottom: 30px;
         font-size: 15px;
     }
-    .iconCard{
-        width:15px;
-    }
     .modalEachChamp{
         font-size: 17px;
     }
@@ -288,12 +292,9 @@ input[type="search"]:hover{
         height: 50px;
         position: fixed;
     }
-    .pag_name{
-        font-size: 12.5px;
-    }
     img[src="img/logo_lol.png"]{
-        height: 50px;
-        width: 50px;
+        width: 200px;
+        margin-left: 100px;
     }
     aside{
         width: 80px;
@@ -338,9 +339,6 @@ input[type="search"]:hover{
         margin-bottom: 30px;
         font-size: 10px;
     }
-    .iconCard{
-        width:10px;
-    }
     .modalEachChamp{
         line-height: 15px;
         font-size: 15px;
@@ -367,22 +365,10 @@ input[type="search"]:hover{
         height: 50px;
         position: fixed;
     }
-    .pag_name{
-        font-size: 12.5px;
-    }
     img[src="img/logo_lol.png"]{
-        height: 50px;
-        width: 50px;
+        width: 150px;
+        margin-left: 0px;
     }
-    aside{
-        /* width: 80px;
-        padding: 5px;
-        line-height: 15px;
-        margin-top: 50px;
-        padding-left: 15px; 
-        font-size: 9px; */
-        display: none;
-    } 
     label[for=" "]{
         margin-bottom: 5px;
     }
@@ -391,11 +377,12 @@ input[type="search"]:hover{
         margin-bottom: 30px;
         font-size: 10px;
         margin-left: auto;
+        margin-right: 10px;
     } 
     input[type="search"]{
         padding: 4px 9px 4px 67.5px;
         font-size: 12px;
-        width: 270px;
+        width: 260px;
         height: 35px;
         background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
     } 
@@ -414,9 +401,6 @@ input[type="search"]:hover{
         margin-right: 10px;
         margin-bottom: 30px;
         font-size: 10px;
-    }
-    .iconCard{
-        width:10px;
     }
     .modalEachChamp{
         line-height: 15px;
@@ -444,4 +428,32 @@ input[type="search"]:hover{
     #textContainer{
         width: 220px;
     }
+    /* Aside */
+    .toggle{
+        visibility: visible;
+    }
+    aside{
+        left: -200px;
+        transition: all 500ms linear;
+        margin-top: 60px;
+        font-size: 12px;
+    }
+    aside .toggle{
+        position: fixed;
+        left: 20px;
+        cursor: pointer;
+        margin-top: -85px;
+    }
+    span{
+        display: block;
+        width: 40px;
+        height: 36px;
+        text-align: center;
+        background-color: rgb(17, 17, 17, 0.8);
+        border: 1 px solid #C6923C;
+        font-size: 30px;
+    }
+    aside.active{
+        left:0;
+    }   
 }
