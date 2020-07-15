@@ -7,15 +7,15 @@ const champions = Object.values(lol.data);
 // imprimir en pantalla los array de champions que escoja (todos o filtrados)
 const renderChampionsInScreen = (arrayOfChampions) => {
   document.getElementById('allTheChamps').innerHTML = arrayOfChampions.map(champ =>
-    `<div class="containerEachChamp">
+    `<div class='containerEachChamp'>
       <p>${champ.name.toUpperCase()}</p><br>
-      <div id="containerProfilePic"> 
-        <img id="profilePic" src="${champ.splash}">
+      <div id='containerProfilePic'> 
+        <img id='profilePic' src="${champ.splash}">
       </div><br>
       <p> [${champ.tags}]</p><br>
       <p> ⚔️${champ.info.attack} &nbsp&nbsp 🛡️${champ.info.defense}</p>
       <p> 🔮${champ.info.magic} &nbsp&nbsp ⚠️${champ.info.difficulty}</p>
-      <div class="containerModal">
+      <div class='containerModal'>
       </div>
       </div>`).join('');
 };
@@ -58,61 +58,57 @@ selectList.addEventListener('change', mixFilterTagInformation);
 
 // SEARCHER
 const inputSearch = document.getElementById('inputSearch');
-// funcion que recoge input de busqueda y va filtrando automaticamente y luego imprime con renderChampionsInScreen
+// funcion que recoge input de busqueda, filtra automaticamente e imprime con renderChampionsInScreen
 function valueSearcher() {
   const inputValue = inputSearch.value.toUpperCase();
   renderChampionsInScreen(filterSearch(champions, inputValue));
 }
 inputSearch.addEventListener('keyup', valueSearcher);
 
-//BOTON PARA LIMPIAR FILTROS
-const btnClear= document.querySelector('.btnClear');
-function clearFilter(){
+// BOTON PARA LIMPIAR FILTROS
+const btnClear = document.querySelector('.btnClear');
+function clearFilter() {
   location.reload(true);
 }
-
-btnClear.addEventListener('click',clearFilter)
-
-addEventListener('mouse',clearFilter)
-
-
+btnClear.addEventListener('click', clearFilter);
 
 // Aside desplegable
-const btnToggle= document.querySelector('.toggle');
+const btnToggle = document.querySelector('.toggle');
 btnToggle.addEventListener('click', () => {
   document.getElementById('filter').classList.toggle('active');
 });
 
 // MODAL
 const showModalChampion = () => {
-  const actualModal = event.target.querySelector('.containerModal');
-  actualModal.style.display = 'block';
+  console.log(event.target)
+  const actualModal = document.querySelector('.containerModal');
   for (let i = 0; i < champions.length; i++) {
-    if ((champions[i].name).toUpperCase() === event.target.firstElementChild.innerHTML) {
+    if (champions[i].splash === event.target.src || champions[i].splash === event.target.querySelector('#profilePic').src  ) {
+      actualModal.style.display = 'block';
       // lo que contiene el contenedor containerModal
       actualModal.innerHTML = 
-      `<div class="modalEachChamp">
-        <span class="close">&times;</span>
-        <div class="containerModalName">
+      `<div class='modalEachChamp'>
+        <span class='close'>&times;</span>
+        <div class='containerModalName'>
           <p> ${champions[i].name.toUpperCase()}</p><br>
-          <p class="titleChamp"> ${champions[i].title}</p><br>
+          <p class='titleChamp'> ${champions[i].title}</p><br>
         </div>
-      <div id="containerPhotoAndText">
-        <div id="containerModalPic"> 
-          <img id="modalPic" src="${champions[i].splash}">
-        </div><br>
-        <div id="textContainer">
-          <p class="infoBlurb">${champions[i].blurb}</p><br>
+        <div id='containerPhotoAndText'>
+          <div id='containerModalPic'> 
+            <img id='modalPic' src="${champions[i].splash}">
+          </div><br>
+          <div id='textContainer'>
+          <p class='infoBlurb'>${champions[i].blurb}</p><br>
+          </div>
         </div>
-      </div>
-      <div id="containerStatsModal">
+        <div id='containerStatsModal'>
           <div id='containerHealthAttack'>
-            <div id="healthInfo">
+            <div id='healthInfo'>
               <p>❤️Health: </p><br>
               <p>hp: ${champions[i].stats.hp}</p>
               <p>hpregen: ${champions[i].stats.hpregen}</p>
             </div>
-            <div id="attackInfo">
+            <div id='attackInfo'>
               <p>⚔️Attack: </p><br>
               <p>attackrange: ${champions[i].stats.attackrange}</p>
               <p>attackdamage: ${champions[i].stats.attackdamage}</p>
@@ -124,27 +120,27 @@ const showModalChampion = () => {
               <p>mp: ${champions[i].stats.mp}</p>
               <p>mpregen: ${champions[i].stats.mpregen}</p>
             </div>      
-            <div id="otherInfo">
+            <div id='otherInfo'>
               <p>➕Others: </p><br>
               <p>movespeed: ${champions[i].stats.movespeed}</p>
               <p>armor: ${champions[i].stats.armor}</p>
             </div>
           </div>
+        </div>
       </div>
-    </div>
-    <br>
-  </div>`;
-    }
-  }
-  // para cerrar el modal al hacer click afuera
-  window.onclick = (event) => {
-    if (event.target === actualModal) {
-      actualModal.style.display = 'none';
-    }
-  };
-  // para cerrar el modal al hacer click en el boton cerrar
-  event.target.querySelector('.close').onclick = () => {
-    actualModal.style.display = 'none';
-  };
-};
+      <br>
+    </div>`;
+    // para cerrar el modal al hacer click afuera
+      window.onclick = (event) => {
+        if (event.target === actualModal) {
+          actualModal.style.display = 'none';
+        }
+      };
+      // para cerrar el modal al hacer click en el boton cerrar
+      document.querySelector('.close').onclick = () => {
+        actualModal.style.display = 'none';
+      };
+    };  
+  }   
+}; 
 document.querySelector('#allTheChamps').addEventListener('click', showModalChampion);

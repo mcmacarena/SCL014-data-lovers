@@ -139,7 +139,7 @@ input[type="search"]:hover{
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto; /*Enable scroll if needed */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 .modalEachChamp{
@@ -429,6 +429,7 @@ input[type="search"]:hover{
     .modalEachChamp{
         line-height: 15px;
         font-size: 15px;
+        margin-bottom: 80px;
     }
     #containerPhotoAndText{
         flex-direction: column;
@@ -453,9 +454,6 @@ input[type="search"]:hover{
         width: 220px;
     }
     /* Aside */
-    .toggle{
-        visibility: visible;
-    }
     aside{
         left: -200px;
         transition: all 500ms linear;
@@ -468,7 +466,8 @@ input[type="search"]:hover{
         cursor: pointer;
         margin-top: -85px;
     }
-    span{
+    .toggle{
+        visibility: visible;
         display: block;
         width: 40px;
         height: 36px;
