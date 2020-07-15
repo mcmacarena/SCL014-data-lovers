@@ -237,14 +237,19 @@ input[type="search"]:hover{
         padding: 5px;
         line-height: 20px;
         margin-top: 70px;
-        padding-left: 15px; 
+        padding-left: 15px;  
         font-size: 12px;
     } 
     label[for=" "]{
         margin-bottom: 5px;
+        font-size: 15px;
     }
-    #selectInformation{
-        font-size: 10px;
+    label[for="tag"]{
+        font-size: 14px;
+    }
+    select,option,.btnClear{
+        font-size: 13px ;
+        width:120px;
     }
     .searcher{
         padding-top: 100px;
@@ -297,7 +302,7 @@ input[type="search"]:hover{
         margin-left: 100px;
     }
     aside{
-        width: 80px;
+        width: 100px;
         padding: 5px;
         line-height: 15px;
         margin-top: 50px;
@@ -306,6 +311,14 @@ input[type="search"]:hover{
     } 
     label[for=" "]{
         margin-bottom: 5px;
+        font-size: 13px;
+    }
+    label[for="tag"]{
+        font-size: 11px;
+    }
+    select,option,.btnClear{
+        font-size: 12px ;
+        width:95px;
     }
     #selectInformation{
         font-size: 10px;
@@ -324,7 +337,7 @@ input[type="search"]:hover{
         background: rgb(17, 17, 17) url("img/search-icon.png") no-repeat 10px center;
     } 
     #allTheChamps{
-        margin-left: 100px;
+        margin-left: 120px;
     }
     #containerProfilePic{
         height: auto;
@@ -371,6 +384,17 @@ input[type="search"]:hover{
     }
     label[for=" "]{
         margin-bottom: 5px;
+    }
+    label[for=" "]{
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    label[for="tag"]{
+        font-size: 11px;
+    }
+    select,option,.btnClear{
+        font-size: 12px ;
+        width:120px;
     }
     .searcher{
         padding-top: 80px;
@@ -450,7 +474,7 @@ input[type="search"]:hover{
         height: 36px;
         text-align: center;
         background-color: rgb(17, 17, 17, 0.8);
-        border: 1 px solid #C6923C;
+        border: 1px solid #C6923C;
         font-size: 30px;
     }
     aside.active{

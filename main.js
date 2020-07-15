@@ -73,6 +73,9 @@ function clearFilter(){
 
 btnClear.addEventListener('click',clearFilter)
 
+addEventListener('mouse',clearFilter)
+
+
 
 // Aside desplegable
 const btnToggle= document.querySelector('.toggle');
