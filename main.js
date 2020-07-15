@@ -82,8 +82,15 @@ btnToggle.addEventListener('click', () => {
 const showModalChampion = () => {
   console.log(event.target)
   const actualModal = document.querySelector('.containerModal');
+  let eventClickCapture;
+  // para evitar que arroje un error para el event target
+  if (event.target.src !== undefined){
+    eventClickCapture = event.target.src // click en la foto
+  } else{
+    eventClickCapture = event.target.querySelector('#profilePic').src // click en la tarjeta
+  }
   for (let i = 0; i < champions.length; i++) {
-    if (champions[i].splash === event.target.src || champions[i].splash === event.target.querySelector('#profilePic').src  ) {
+    if (champions[i].splash === eventClickCapture) {
       actualModal.style.display = 'block';
       // lo que contiene el contenedor containerModal
       actualModal.innerHTML = 
@@ -143,4 +150,10 @@ const showModalChampion = () => {
     };  
   }   
 }; 
-document.querySelector('#allTheChamps').addEventListener('click', showModalChampion);
+// recorriendo cada uno de los contenedores y asociandolos el evento click y la funcion
+const allTheChamps = document.querySelectorAll('.containerEachChamp');
+for (let i= 0; i < allTheChamps.length; i++) {
+  allTheChamps[i].addEventListener('click', showModalChampion)
+}
+
+
