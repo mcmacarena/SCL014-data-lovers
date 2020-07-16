@@ -58,7 +58,7 @@ selectList.addEventListener('change', mixFilterTagInformation);
 
 // SEARCHER
 const inputSearch = document.getElementById('inputSearch');
-// funcion que recoge input de busqueda, filtra automaticamente e imprime con renderChampionsInScreen
+// funcion que recoge input de search, filtra automaticamente e imprime con renderChampionsInScreen
 function valueSearcher() {
   const inputValue = inputSearch.value.toUpperCase();
   renderChampionsInScreen(filterSearch(champions, inputValue));
@@ -80,14 +80,13 @@ btnToggle.addEventListener('click', () => {
 
 // MODAL
 const showModalChampion = () => {
-  console.log(event.target)
   const actualModal = document.querySelector('.containerModal');
   let eventClickCapture;
   // para evitar que arroje un error para el event target
-  if (event.target.src !== undefined){
-    eventClickCapture = event.target.src // click en la foto
-  } else{
-    eventClickCapture = event.target.querySelector('#profilePic').src // click en la tarjeta
+  if (event.target.src !== undefined) {
+    eventClickCapture = event.target.src; // click en la foto
+  } else {
+    eventClickCapture = event.target.querySelector('#profilePic').src; // click en la tarjeta
   }
   for (let i = 0; i < champions.length; i++) {
     if (champions[i].splash === eventClickCapture) {
@@ -137,7 +136,7 @@ const showModalChampion = () => {
       </div>
       <br>
     </div>`;
-    // para cerrar el modal al hacer click afuera
+      // para cerrar el modal al hacer click afuera
       window.onclick = (event) => {
         if (event.target === actualModal) {
           actualModal.style.display = 'none';
@@ -147,13 +146,15 @@ const showModalChampion = () => {
       document.querySelector('.close').onclick = () => {
         actualModal.style.display = 'none';
       };
-    };  
+    }
   }   
-}; 
-// recorriendo cada uno de los contenedores y asociandolos el evento click y la funcion
-const allTheChamps = document.querySelectorAll('.containerEachChamp');
-for (let i= 0; i < allTheChamps.length; i++) {
-  allTheChamps[i].addEventListener('click', showModalChampion)
+};
+// funcion que recorre cada uno de los contenedores de las cartas
+const clickOnTheCards = () => {
+  const allTheChamps = document.querySelectorAll('.containerEachChamp');
+  for (let i = 0; i < allTheChamps.length; i++) {
+    allTheChamps[i].addEventListener('click', showModalChampion);
+  }
 }
-
-
+// evento click del contenedor de todas las cartas
+document.querySelector('#allTheChamps').addEventListener('click', clickOnTheCards);
