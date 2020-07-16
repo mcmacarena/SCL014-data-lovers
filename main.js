@@ -157,4 +157,4 @@ const clickOnTheCards = () => {
   }
 }
 // evento click del contenedor de todas las cartas
-document.querySelector('#allTheChamps').addEventListener('click', clickOnTheCards);
+document.querySelector('#allTheChamps').addEventListener('mouseover', clickOnTheCards);
