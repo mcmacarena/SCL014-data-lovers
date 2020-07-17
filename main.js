@@ -30,6 +30,7 @@ function valueFilterTag() {
   if (document.querySelector('#checkboxTags :checked') !== null) {
     const tagValue = document.querySelector('#checkboxTags :checked').value;
     renderChampionsInScreen(filterTag(champions, tagValue));
+    console.log(filterTag(champions, tagValue));
   }
 }
 checkbox.addEventListener('change', valueFilterTag);

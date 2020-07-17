@@ -65,7 +65,6 @@ select,option, .btnClear{
     width:140px;
     cursor:pointer;
 }
-
 #containerAsideMain{
     margin-top: 110px;
 }
@@ -143,7 +142,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     display: none;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
+    padding-top:50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -179,10 +178,14 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     float: right;
     font-size: 28px;
     font-weight: bold;
-    align-self: flex-end; 
+    position: absolute;
     padding: 10px;
     border: 1.5px solid #C6923C;
     border-radius: 50%;
+}
+#close{
+    display: flex;
+    justify-content: flex-end;
 }
 #containerPhotoAndText{
     display: flex;
@@ -209,14 +212,9 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
 #healthInfo, #manaInfo, #attackInfo, #otherInfo{
     border: 1px solid #C6923C;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     margin: 10px;
-}
-#healthInfo,#manaInfo{
-    width:150px;
-}
-#attackInfo,#otherInfo{
-    width:190px; 
+    width: 190px;
 }
 #subcontainerStats{
     display: flex;
@@ -236,8 +234,6 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
 /* EFECTOS MODAL */
 .close:hover{
     border: 1.5px solid rgb(236, 193, 124);
-}
-.close:hover{
     color:white;
 }
 
@@ -291,7 +287,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
         width: 173px;
     }
     .containerEachChamp{
-        line-height: 15px;
+        line-height: 17px;
         height: 262px;
         width: 188px;
         margin-left: 10px;
@@ -307,6 +303,11 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     }
     .containerModalName{
         font-size: 35px;
+    }
+    #healthInfo, #manaInfo, #attackInfo, #otherInfo{
+        padding: 15px;
+        margin: 10px;
+        width: 180px;
     }
 }
 
@@ -381,11 +382,9 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     .containerModalName{
         font-size: 35px;
     }
-    #healthInfo,#manaInfo{
-        width:120px;
-    }
-    #attackInfo,#otherInfo{
-        width:150px; 
+    #healthInfo,#manaInfo,#attackInfo,#otherInfo{
+        padding: 15px;
+        width:140px; 
     }
     #containerModalPic{
         width: 600px;
@@ -459,11 +458,12 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     .containerModalName{
         font-size: 35px;
     }
-    #healthInfo,#manaInfo{
-        width:120px;
+    #healthInfo,#manaInfo,#attackInfo,#otherInfo{
+        width:150px;
     }
-    #attackInfo,#otherInfo{
-        width:150px; 
+    #containerHealthAttack,#containerManaOther{
+        display: flex;
+        justify-content: center;
     }
     #containerModalPic{
         width: 220px;
@@ -471,6 +471,17 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     }
     #textContainer{
         width: 220px;
+        align-self: center;
+    }
+    .close {
+        font-size: 28px;
+        padding: 7px;
+        margin-left: 12px;
+        margin-top: -12px;
+    }
+    #close{
+        display: flex;
+        justify-content: flex-end;
     }
     /* Aside */
     aside{
