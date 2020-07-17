@@ -76,20 +76,20 @@ Desde el comienzo de la página se tuvo la idea de que tuviera una interfaz simp
 
 Este fue creado en hoja y papel y fue pensado tanto en el buscador web como en celulares.
 
-![sketchweb](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/sketchweb.jpeg) ![sketchresponsive](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/sketchresponsive.jpeg)
+![sketchweb](urldelapic) ![sketchresponsive](urldelapic)
 
 ### 4.2. Prototipo baja fidelidad
 
 Se hicieron prototipos de baja calidad con la app web “invision” los cuales fueron testeados tanto en formato web y smartphone.
 
-![invision1web](uhttps://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision1web.png) ![invision2web](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision2web.png)
+![invision1web](urldelapic) ![invision2web](urldelapic)
 
-![invision1celu](uhttps://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision1celu.png) ![invision2celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision2celu.png) ![invision3celu](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/invision3celu.png)
+![invision1celu](urldelapic) ![invision2celu](urldelapic) ![invision3celu](urldelapic)
 
 ### 4.3. Prototipo de alta fidelidad
 
 El prototipo de alta fidelidad se logró gracias a la appweb “Figma”, donde al igual que el prototipo de baja fidelidad fue testeado con usuarios. 
 
-![figma](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/figma.png) ![figma2](https://raw.githubusercontent.com/paupi-chill-e/SCL014-data-lovers/master/src/img/FotosReadMe/Figma2.png)
+![figma](urldelapic) ![figma2](urldelapic)
 
 
