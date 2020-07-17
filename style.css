@@ -262,7 +262,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     label[for="tag"]{
         font-size: 14px;
     }
-    select,option{
+    select,option, .btnClear{
         font-size: 13px ;
         width:120px;
     }
@@ -336,9 +336,9 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     label[for="tag"]{
         font-size: 11px;
     }
-    select,option,.btnClear{
+    select,option, .btnClear{
         font-size: 12px ;
-        width:95px;
+        width: 95px;
     }
     #selectInformation{
         font-size: 10px;
