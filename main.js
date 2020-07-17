@@ -94,7 +94,9 @@ const showModalChampion = () => {
       // lo que contiene el contenedor containerModal
       actualModal.innerHTML = 
       `<div class='modalEachChamp'>
-        <span class='close'>&times;</span>
+      <div id="close">
+       <span class='close'>&times;</span>
+      </div>
         <div class='containerModalName'>
           <p> ${champions[i].name.toUpperCase()}</p><br>
           <p class='titleChamp'> ${champions[i].title}</p><br>
@@ -111,25 +113,25 @@ const showModalChampion = () => {
           <div id='containerHealthAttack'>
             <div id='healthInfo'>
               <p>❤️Health: </p><br>
-              <p>hp: ${champions[i].stats.hp}</p>
-              <p>hpregen: ${champions[i].stats.hpregen}</p>
+              <p>Heal Points: ${champions[i].stats.hp}</p>
+              <p>Heal Regeneration: ${champions[i].stats.hpregen}</p>
             </div>
             <div id='attackInfo'>
               <p>⚔️Attack: </p><br>
-              <p>attackrange: ${champions[i].stats.attackrange}</p>
-              <p>attackdamage: ${champions[i].stats.attackdamage}</p>
+              <p>Attack Range: ${champions[i].stats.attackrange}</p>
+              <p>Attack Damage: ${champions[i].stats.attackdamage}</p>
             </div>  
           </div>
           <div id='containerManaOther'>
             <div id="manaInfo">
               <p>💙Mana: </p><br>
-              <p>mp: ${champions[i].stats.mp}</p>
-              <p>mpregen: ${champions[i].stats.mpregen}</p>
+              <p>Mana Points: ${champions[i].stats.mp}</p>
+              <p>Mana Regeneration: ${champions[i].stats.mpregen}</p>
             </div>      
             <div id='otherInfo'>
               <p>➕Others: </p><br>
-              <p>movespeed: ${champions[i].stats.movespeed}</p>
-              <p>armor: ${champions[i].stats.armor}</p>
+              <p>Move Speed: ${champions[i].stats.movespeed}</p>
+              <p>Armor: ${champions[i].stats.armor}</p>
             </div>
           </div>
         </div>
@@ -158,3 +160,5 @@ const clickOnTheCards = () => {
 }
 // evento click del contenedor de todas las cartas
 document.querySelector('#allTheChamps').addEventListener('mouseover', clickOnTheCards);
+// al hacer click en el logo se refresca la página
+document.querySelector('.log_img').addEventListener('click',clearFilter);
