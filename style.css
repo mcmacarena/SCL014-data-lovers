@@ -17,7 +17,6 @@ html{
 }
 /* HEADER */
 header {
-    z-index: 1;
     position: fixed;
     height: 100px;
     width: 100%;
@@ -35,7 +34,6 @@ img[src="img/logo_lol.png"]{
 }
 /* BODY */
 aside{
-    z-index: 1 ;
     position: fixed;
     width: 160px;
     height: 100%;
@@ -57,7 +55,7 @@ label[for=" "]{
 label[for="tag"]{
     font-size: 16px;
 }
-select,option,.btnClear{
+select,option, .btnClear{
     font-size: 15px ;
     font-family:themillion;
     background-color: rgb(17, 17, 17, 0.85);
@@ -67,6 +65,7 @@ select,option,.btnClear{
     width:140px;
     cursor:pointer;
 }
+
 #containerAsideMain{
     margin-top: 110px;
 }
@@ -112,8 +111,7 @@ input[type="search"]{
     line-height: 20px;
     display:flex;
     flex-direction: column;
-    background-color: rgb(17, 17, 17);
-    opacity: 0.8;
+    background-color: rgb(17, 17, 17, 0.85);
     height: 350px;
     width: 250px;
     justify-content: center;
@@ -130,16 +128,15 @@ input[type="search"]{
 .containerEachChamp:hover{
     border: 1.5px solid rgb(236, 193, 124);
     cursor:pointer;
-    opacity: 100;
-    -webkit-box-shadow: inset 0px -200px 184px -149px rgba(236,193,124,0.18);
-    -moz-box-shadow: inset 0px -200px 184px -149px rgba(236,193,124,0.18);
-    box-shadow: inset 0px -200px 184px -149px rgba(236,193,124,0.18);
+    -webkit-box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
+    -moz-box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
+    box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
 }
 input[type="search"]:hover, select:hover, .btnClear:hover{
     border: 1.5px solid rgb(236, 193, 124);
-    -webkit-box-shadow: inset 0px -21px 67px -15px rgba(236,193,124,0.21);
-    -moz-box-shadow: inset 0px -21px 67px -15px rgba(236,193,124,0.21);
-    box-shadow: inset 0px -21px 67px -15px rgba(236,193,124,0.21);
+    -webkit-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+    -moz-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+    box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
 }
 /* MODAL */
 .containerModal{ 
@@ -153,6 +150,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     height: 100%; /* Full height */
     overflow: auto; /*Enable scroll if needed */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    opacity:100;
 }
 .modalEachChamp{
     color: rgb(207, 207, 207);
@@ -236,7 +234,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     font-style: italic;
 }
 /* EFECTOS MODAL */
-.modalEachChamp:hover,#healthInfo:hover, #manaInfo:hover, #attackInfo:hover, #otherInfo:hover, .close:hover{
+.close:hover{
     border: 1.5px solid rgb(236, 193, 124);
 }
 .close:hover{
@@ -268,7 +266,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     label[for="tag"]{
         font-size: 14px;
     }
-    select,option,.btnClear{
+    select,option{
         font-size: 13px ;
         width:120px;
     }
