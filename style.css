@@ -91,6 +91,13 @@ input[type="search"]{
     height: 40px;
     color: white;
 } 
+/* efectos */
+input[type="search"]:hover, select:hover, .btnClear:hover{
+    border: 1.5px solid rgb(236, 193, 124);
+    -webkit-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+    -moz-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+    box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
+}
 /* CHAMPIONS */
 #allTheChamps{
     display: flex;
@@ -123,19 +130,13 @@ input[type="search"]{
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-/* EFECTOS */
+/* efecto */
 .containerEachChamp:hover{
     border: 1.5px solid rgb(236, 193, 124);
     cursor:pointer;
     -webkit-box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
     -moz-box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
     box-shadow: inset 0px -50px 102px -38px rgba(4,12,23,1);
-}
-input[type="search"]:hover, select:hover, .btnClear:hover{
-    border: 1.5px solid rgb(236, 193, 124);
-    -webkit-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
-    -moz-box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
-    box-shadow: inset 0px -50px 102px -38px rgba(198,146,60,0.1);
 }
 /* MODAL */
 .containerModal{ 
@@ -231,7 +232,6 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     font-size: 25px;
     font-style: italic;
 }
-/* EFECTOS MODAL */
 .close:hover{
     border: 1.5px solid rgb(236, 193, 124);
     color:white;
@@ -334,7 +334,7 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
         font-size: 13px;
     }
     label[for="tag"]{
-        font-size: 11px;
+        font-size: 10px;
     }
     select,option, .btnClear{
         font-size: 12px ;
@@ -485,10 +485,12 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     }
     /* Aside */
     aside{
-        left: -200px;
+        left: -150px;
         transition: all 500ms linear;
         margin-top: 60px;
         font-size: 12px;
+        width:120px;
+        padding-left:15px;
     }
     aside .toggle{
         position: fixed;
@@ -508,5 +510,5 @@ input[type="search"]:hover, select:hover, .btnClear:hover{
     }
     aside.active{
         left:0;
-    }   
+    }  
 }

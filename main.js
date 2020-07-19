@@ -30,7 +30,6 @@ function valueFilterTag() {
   if (document.querySelector('#checkboxTags :checked') !== null) {
     const tagValue = document.querySelector('#checkboxTags :checked').value;
     renderChampionsInScreen(filterTag(champions, tagValue));
-    console.log(filterTag(champions, tagValue));
   }
 }
 checkbox.addEventListener('change', valueFilterTag);
@@ -72,6 +71,8 @@ function clearFilter() {
   location.reload(true);
 }
 btnClear.addEventListener('click', clearFilter);
+// al hacer click en el logo se refresca la página
+document.querySelector('.log_img').addEventListener('click',clearFilter);
 
 // Aside desplegable
 const btnToggle = document.querySelector('.toggle');
@@ -93,7 +94,7 @@ const showModalChampion = () => {
     if (champions[i].splash === eventClickCapture) {
       actualModal.style.display = 'block';
       // lo que contiene el contenedor containerModal
-      actualModal.innerHTML = 
+      actualModal.innerHTML =
       `<div class='modalEachChamp'>
       <div id="close">
        <span class='close'>&times;</span>
@@ -158,8 +159,8 @@ const clickOnTheCards = () => {
   for (let i = 0; i < allTheChamps.length; i++) {
     allTheChamps[i].addEventListener('click', showModalChampion);
   }
-}
+};
 // evento click del contenedor de todas las cartas
 document.querySelector('#allTheChamps').addEventListener('mouseover', clickOnTheCards);
-// al hacer click en el logo se refresca la página
-document.querySelector('.log_img').addEventListener('click',clearFilter);
+
+
