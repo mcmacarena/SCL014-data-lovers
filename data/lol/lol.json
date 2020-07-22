@@ -6687,6 +6687,55 @@
         "attackspeedperlevel": 2
       }
     },
+    "Yuumi": {      
+      "version": "V10.14",      
+      "id": "Yuumi",      
+      "key": "350",      
+      "name": "Yuumi",      
+      "title": "The Magical Kitten",      
+      "img": "https://www.masterypoints.com/assets/img/lol/champion_icons/Yuumi.png",      
+      "splash": "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yuumi_0.jpg",      
+      "blurb": "Yuumi, a magical kitten from the City of Bandle, was once the companion of a yordle sorceress, Norra. When her owner mysteriously disappeared, Yuumi became Norra's Guardian of the Book of Thresholds, whose pages contain portals they use to travel and search for her. In his desire for affection, Yuumi seeks friendly companions with whom to form a team throughout their journey, protecting them with luminous shields and their fierce determination. Book struggles to keep Yuumi focused on her mission, but earthly comforts like naps and fish often capture her attention. However, in the end, she always returns to her mission to find her friend.",      
+      "info": {        
+        "attack": 5,        
+        "defense": 1,        
+        "magic": 8,        
+        "difficulty": 1 
+      },      
+      "image": {        
+        "full": "Yuumi.png",        
+        "sprite": "champion1.png",        
+        "group": "champion",        
+        "x": 240,        
+        "y": 48,        
+        "w": 48,        
+        "h": 48 
+      },      
+      "tags": ["Support"],      
+      "partype": "MP",           
+      "date": "2019-05-14",      
+      "patch": "V9.10",      
+      "stats":{        
+        "hp": 480,        
+        "hpperlevel":70 ,        
+        "mp": 400,       
+        "mpperlevel":45 ,        
+        "armor":25 ,       
+        "armorperlevel":3 ,        
+        "mrbase": 25,
+        "mrlevel" :0.3 ,
+        "hpregen":7 ,
+        "hpregenperlevel":0.55 ,        
+        "mpregen": 10,        
+        "mpregenperlevel": 0.4,        
+        "attackdamage":55 ,        
+        "attackdamageperlevel":3.1,        
+        "attackspeedoffset": 0.625,        
+        "attackspeedperlevel": 1,        
+        "attackrange": 500,        
+        "movespeed": 330
+      }
+    },
     "Zac": {
       "version": "6.24.1",
       "id": "Zac",
