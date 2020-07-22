@@ -1,8 +1,16 @@
 import { filterTag, filterSearch, orderInfo } from './data.js';
-import lol from './data/lol/lol.js';
+// import lol from './data/lol/lol.js';
 
-// Array que contiene los valores del data (en este caso cada uno de los champions)
-const champions = Object.values(lol.data);
+// data that so fetch
+var champions;
+fetch('./data/lol/lol.json')
+.then(function(response) {
+  return response.json();
+})
+.then(function(lol) {
+  champions = Object.values(lol.data);
+  renderChampionsInScreen(champions);
+});
 
 // imprimir en pantalla los array de champions que escoja (todos o filtrados)
 const renderChampionsInScreen = (arrayOfChampions) => {
@@ -19,8 +27,6 @@ const renderChampionsInScreen = (arrayOfChampions) => {
       </div>
       </div>`).join('');
 };
-// imprimir todos
-renderChampionsInScreen(champions);
 
 // FILTER TAG
 // seleccion todos los filtros tag
@@ -162,5 +168,3 @@ const clickOnTheCards = () => {
 };
 // evento click del contenedor de todas las cartas
 document.querySelector('#allTheChamps').addEventListener('mouseover', clickOnTheCards);
-
-
