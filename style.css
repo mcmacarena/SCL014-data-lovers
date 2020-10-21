@@ -11,7 +11,7 @@ html{
     font-family:themillion;
 }
 .background{
-    background-image:url(http://ava7.com/w/games/league-of-legends/league-of-legends-game-lol-shadow-isles-landscape-city.jpg);
+    background-image: url('./img/league-of-legends-game-lol-shadow-isles-landscape-city.jpg');
     background-position: center;
     background-attachment: fixed;
 }
